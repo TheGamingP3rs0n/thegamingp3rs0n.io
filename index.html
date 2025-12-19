@@ -8,31 +8,59 @@
 </head>
 <body>
 
-  <header>
-    <h1>Experiments</h1>
-    <p>Small interactive things.</p>
-  </header>
+<header>
+  <h1>Experiments</h1>
+  <p>Small interactive things.</p>
 
-  <main class="grid">
-    <a class="card" href="games/game1/">
-      <h2>Game One</h2>
-      <p>A strange experiment.</p>
-    </a>
+  <div class="controls">
+    <input id="search" type="text" placeholder="Search experiments..." />
+    <select id="categoryFilter">
+      <option value="all">All</option>
+      <option value="ai">AI</option>
+      <option value="games">Games</option>
+      <option value="weird">Weird</option>
+    </select>
 
-    <a class="card" href="games/game2/">
-      <h2>Game Two</h2>
-      <p>Click and see.</p>
-    </a>
+    <button id="randomBtn">🎲 Random</button>
+    <button id="darkToggle">🌙</button>
+  </div>
+</header>
 
-    <div class="card locked">
-      <h2>Coming Soon</h2>
-      <p>👀</p>
-    </div>
-  </main>
+<main class="grid" id="grid">
 
-  <footer>
-    <p>Made by you.</p>
-  </footer>
+  <!-- TEMPLATE CARD -->
+  <a class="card" href="games/digital-consciousness/" data-title="Digital Consciousness Archive" data-category="ai">
+    <h2>Digital Consciousness Archive</h2>
+    <p class="preview">Store thoughts like a time capsule.</p>
+  </a>
 
+  <a class="card" href="games/mind-control/" data-title="Mind Control Dashboard" data-category="weird">
+    <h2>Mind Control Dashboard</h2>
+    <p class="preview">Fake controls for time, luck, focus.</p>
+  </a>
+
+  <a class="card" href="games/ai-learner/" data-title="Machine Learns Anything" data-category="ai">
+    <h2>Machine Learns Anything</h2>
+    <p class="preview">Watch a neural network learn.</p>
+  </a>
+
+  <a class="card" href="games/mood-site/" data-title="Mood-Based Website" data-category="weird">
+    <h2>Mood-Based Website</h2>
+    <p class="preview">Your mood controls the site.</p>
+  </a>
+
+  <a class="card" href="games/album-vibe/" data-title="Album Vibe Visualizer" data-category="ai">
+    <h2>Album Vibe Visualizer</h2>
+    <p class="preview">Turn albums into aesthetics.</p>
+  </a>
+
+  <a class="card" href="games/one-button/" data-title="One-Button Website" data-category="weird">
+    <h2>One-Button Website</h2>
+    <p class="preview">One button. Infinite chaos.</p>
+  </a>
+
+</main>
+
+<script src="script.js"></script>
 </body>
 </html>
