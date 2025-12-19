@@ -2,29 +2,52 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Machine Learns to Jump</title>
+  <title>Machine Learns Anything</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<h1>Machine Learns to Jump</h1>
-<p class="subtitle">A tiny neural network learning in real time.</p>
+<header>
+  <h1>Machine Learns Anything</h1>
+  <p>A neural network learning through trial, error, and mutation.</p>
+</header>
 
 <canvas id="game" width="800" height="300"></canvas>
 
-<div class="controls">
-  <label>
-    Learning Speed
-    <input id="learningRate" type="range" min="0.001" max="0.2" step="0.001" value="0.05">
-  </label>
+<section class="panel">
+  <div>
+    <label>Task</label>
+    <select id="task">
+      <option value="jump">Jump Gaps</option>
+      <option value="dodge">Dodge Blocks</option>
+      <option value="aim">Aim Target</option>
+    </select>
+  </div>
 
-  <label>
-    Simulation Speed
-    <input id="speed" type="range" min="1" max="5" step="1" value="1">
-  </label>
+  <div>
+    <label>Learning Rate</label>
+    <input id="lr" type="range" min="0.001" max="0.2" step="0.001" value="0.05">
+  </div>
 
+  <div>
+    <label>Simulation Speed</label>
+    <input id="speed" type="range" min="1" max="20" step="1" value="1">
+  </div>
+
+  <button id="fast">⚡ Fast-Forward</button>
   <button id="reset">Reset AI</button>
-</div>
+</section>
+
+<section class="stats">
+  <div>Generation: <span id="gen">1</span></div>
+  <div>Best Score: <span id="best">0</span></div>
+  <div>Alive: <span id="alive">0</span></div>
+</section>
+
+<canvas id="graph" width="800" height="200"></canvas>
+
+<h3>Neural Weights</h3>
+<div id="weights"></div>
 
 <script src="script.js"></script>
 </body>
