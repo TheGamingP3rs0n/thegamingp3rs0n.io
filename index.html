@@ -1,19 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>My First Website poo</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #111;
-      color: white;
-      text-align: center;
-      padding-top: 100px;
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Experiments</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>🚀 My Website Is Live!</h1>
-  <p>This site is hosted on GitHub Pages.</p>
+
+  <header>
+    <h1>Experiments</h1>
+    <p>Small interactive things.</p>
+  </header>
+
+  <main class="grid">
+    <a class="card" href="games/game1/">
+      <h2>Game One</h2>
+      <p>A strange experiment.</p>
+    </a>
+
+    <a class="card" href="games/game2/">
+      <h2>Game Two</h2>
+      <p>Click and see.</p>
+    </a>
+
+    <div class="card locked">
+      <h2>Coming Soon</h2>
+      <p>👀</p>
+    </div>
+  </main>
+
+  <footer>
+    <p>Made by you.</p>
+  </footer>
+
 </body>
 </html>
