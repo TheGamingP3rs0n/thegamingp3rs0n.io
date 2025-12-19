@@ -1,0 +1,28 @@
+body {
+  font-family: system-ui, sans-serif;
+  text-align: center;
+  background: #fff;
+  color: #000;
+}
+
+canvas {
+  border: 1px solid #ddd;
+  margin: 20px 0;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+}
+
+.subtitle {
+  color: #666;
+}
