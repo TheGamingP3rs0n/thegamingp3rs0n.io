@@ -1,66 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Experiments</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <title>MicroBlog</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <header>
+    <h1>MicroBlog</h1>
+    <a href="profile.html">Profile</a>
+    <a href="login.html">Login</a>
+  </header>
 
-<header>
-  <h1>Experiments</h1>
-  <p>Small interactive things.</p>
+  <main>
+    <section id="new-post">
+      <textarea id="post-content" placeholder="What's happening?"></textarea>
+      <button onclick="createPost()">Post</button>
+    </section>
 
-  <div class="controls">
-    <input id="search" type="text" placeholder="Search experiments..." />
-    <select id="categoryFilter">
-      <option value="all">All</option>
-      <option value="ai">AI</option>
-      <option value="games">Games</option>
-      <option value="weird">Weird</option>
-    </select>
+    <section id="feed">
+      <!-- Posts will be injected here by JS -->
+    </section>
+  </main>
 
-    <button id="randomBtn">🎲 Random</button>
-    <button id="darkToggle">🌙</button>
-  </div>
-</header>
-
-<main class="grid" id="grid">
-
-  <!-- TEMPLATE CARD -->
-  <a class="card" href="games/digital-consciousness/" data-title="Digital Consciousness Archive" data-category="ai">
-    <h2>Digital Consciousness Archive</h2>
-    <p class="preview">Store thoughts like a time capsule.</p>
-  </a>
-
-  <a class="card" href="games/mind-control/" data-title="Mind Control Dashboard" data-category="weird">
-    <h2>Mind Control Dashboard</h2>
-    <p class="preview">Fake controls for time, luck, focus.</p>
-  </a>
-
-  <a class="card" href="games/ai-learner/" data-title="Machine Learns Anything" data-category="ai">
-    <h2>Machine Learns Anything</h2>
-    <p class="preview">Watch a neural network learn.</p>
-  </a>
-
-  <a class="card" href="games/mood-site/" data-title="Mood-Based Website" data-category="weird">
-    <h2>Mood-Based Website</h2>
-    <p class="preview">Your mood controls the site.</p>
-  </a>
-
-  <a class="card" href="games/album-vibe/" data-title="Album Vibe Visualizer" data-category="ai">
-    <h2>Album Vibe Visualizer</h2>
-    <p class="preview">Turn albums into aesthetics.</p>
-  </a>
-
-  <a class="card" href="games/one-button/" data-title="One-Button Website" data-category="weird">
-    <h2>One-Button Website</h2>
-    <p class="preview">One button. Infinite chaos.</p>
-  </a>
-
-</main>
-
-<script src="script.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
